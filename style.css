@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+html {
+  font-family: 'Inter', sans-serif;
+}
+
+.attribution {
+  background-color: #c5c6ce;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 4rem;
+}
+
+.header__link {
+  text-decoration: none;
+}
+
+.header__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__navigation-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3.3rem;
+  list-style: none;
+}
+
+.header__menu {
+  display: none;
+}
+
+.content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30.3% 30.3% 30.3%;
+      grid-template-columns: 30.3% 30.3% 30.3%;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "main main sidebar" "row-end row-end row-end";
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  justify-items: stretch;
+  padding: 0 5rem;
+  -webkit-column-gap: 3%;
+          column-gap: 3%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content__main {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: main;
+}
+
+.content__poster {
+  grid-area: poster;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content__description {
+  grid-area: description;
+  padding-top: 2rem;
+}
+
+.content__aside {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: sidebar;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.content__image {
+  width: 100%;
+  height: calc(50vh + 40px + 24px);
+}
+
+.content__top-picks {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: row-end;
+}
+
+.description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.description__headline {
+  width: 50%;
+  font-size: 3.5rem;
+  line-height: 4.4rem;
+  padding: 0;
+  padding-right: 1rem;
+  font-weight: 800;
+}
+
+.description__aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.description__text {
+  line-height: 2rem;
+  word-spacing: 0.25rem;
+  color: #5d5f79;
+}
+
+.description__button {
+  background-color: #f15e50;
+  color: #fffdfa;
+  text-transform: uppercase;
+  border: none;
+  padding: 1rem 1.75rem;
+  margin: 1.5rem 0;
+  letter-spacing: 0.3rem;
+  font-weight: 800;
+}
+
+.aside-block {
+  padding: 1rem;
+  background-color: #00001a;
+}
+
+.aside-block__block:not(:last-child) {
+  border-bottom: 1px solid #c5c6ce;
+}
+
+.aside-block__headline {
+  color: #e9ab53;
+  font-size: 3rem;
+}
+
+.aside-block__title {
+  color: #fffdfa;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.aside-block__subtitle {
+  color: #c5c6ce;
+  margin-bottom: 2rem;
+}
+
+.top-picks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.top-picks__card {
+  width: 30%;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.top-picks__img {
+  width: 10vw;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+
+.top-picks__aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 1.5rem;
+}
+
+.top-picks__number {
+  color: #c5c6ce;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.top-picks__title {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.top-picks__subtitle {
+  color: #5d5f79;
+  font-size: 15px;
+}
+/*# sourceMappingURL=style.css.map */

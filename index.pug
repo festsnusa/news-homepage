@@ -1,0 +1,68 @@
+mixin createNavElements(arr)
+  ul.header__navigation-list
+    each value in arr
+      li.header__item
+        a.header__link(href="#")= value
+
+mixin createBlockText(data)
+  each value in data
+    .aside-block__block
+      p.aside-block__title= value["title"]
+      p.aside-block__subtitle= value["subtitle"]
+
+mixin createTopPicksSection(data)
+  .top-picks
+    each value in data
+      .top-picks__card 
+        img.top-picks__img(src= value["img"] alt= value["alt"])
+        .top-picks__aside
+          .top-picks__number= value["number"]
+          .top-picks__title= value["title"]
+          .top-picks__subtitle= value["subtitle"]
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title News Homepage
+    link(rel="stylesheet" href="./style.css")
+  body
+    .header
+      .header__logo 
+        a(href="#") 
+          img(src="./assets/images/logo.svg" alt="logo")
+      .header__navigation
+        +createNavElements(["Home", "New", "Popular", "Trending", "Categories"])
+        img.header__menu(src="./assets/images/icon-menu.svg" alt="menu")
+    .content 
+      .content__main 
+        .content__poster
+          img.content__image(src="./assets/images/image-web-3-desktop.jpg" alt="image-desktop")
+        .content__description
+          .description
+            h1.description__headline The Bright Future of Web 3.0?
+            .description__aside
+              p.description__text We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?
+              button.description__button
+                span Read more
+      aside.content__aside
+        .aside-block
+          h2.aside-block__headline New
+          +createBlockText([
+            {"title": "Hydrogen VS Electric Cars", "subtitle": "Will hydrogen-fueled cars ever catch up to EVs?"},
+            {"title": "The Downsides of AI Artistry", "subtitle": "What are the possible adverse effects of on-demand AI image generation?"},
+            {"title": "Is VC Funding Drying Up?", "subtitle": "Private funding by VC firms is down 50% YOY. We take a look at what that means."}
+          ])
+      .content__top-picks
+        +createTopPicksSection([
+          {"img": "./assets/images/image-retro-pcs.jpg", "alt": "pic1", "number": "01", "title": "Reviving Retro PCs", "subtitle": "What happens when old PCs are given modern upgrades?"},
+          {"img": "./assets/images/image-top-laptops.jpg", "alt": "pic2", "number": "02", "title": "Top 10 Laptops of 2022", "subtitle": "Our best picks for various needs and budgets."},
+          {"img": "./assets/images/image-gaming-growth.jpg", "alt": "pic3", "number": "03", "title": "The Growth of Gaming", "subtitle": "How the pandemic has sparked fresh opportunities."}
+        ])
+    .attribution
+      p Challenge by 
+        a(href="https://www.frontendmentor.io?ref=challenge" target="_blank") Frontend Mentor
+      p Coded by 
+        a(href="https://github.com/festsnusa" target="_blank") festsnusa
